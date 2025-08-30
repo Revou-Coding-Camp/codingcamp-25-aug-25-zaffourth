@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">🌐 MyWeb</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Our Profile</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#message">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi Ariff, <span>Welcome To Website</span></h1>
+      <p>Ini adalah website latihan pertama dengan desain modern 🎉</p>
+      <button class="cta">Explore Now</button>
+    </div>
+  </section>
+
+  <!-- EXPLORE MODAL -->
+  <div id="exploreModal" class="modal">
+    <div class="modal-content explore-box">
+      <span class="close" onclick="closeExploreModal()">&times;</span>
+      <h2>🚀 Welcome, Explorer!</h2>
+      <p id="exploreMsg"></p>
+    </div>
+  </div>
+
+  <!-- HEADQUARTERS -->
+  <section id="profile" class="headquarter">
+    <h2>🌎 Our Headquarter</h2>
+    <div class="hq-list">
+      <div class="circle" onclick="showInfo('jakarta')"><p>Jakarta</p></div>
+      <div class="circle" onclick="showInfo('bandung')"><p>Bandung</p></div>
+      <div class="circle" onclick="showInfo('surabaya')"><p>Surabaya</p></div>
+    </div>
+  </section>
+
+  <!-- INFO MODAL -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="cityTitle"></h2>
+      <p id="cityDesc"></p>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <h2>💼 Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="card" onclick="showProject(1)">🚀 Project 1</div>
+      <div class="card" onclick="showProject(2)">📱 Project 2</div>
+      <div class="card" onclick="showProject(3)">🖥️ Project 3</div>
+    </div>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProjectModal()">&times;</span>
+      <h2 id="projectTitle"></h2>
+      <p id="projectDesc"></p>
+      <img id="projectImg" src="" alt="Project Image">
+    </div>
+  </div>
+
+  <!-- MESSAGE US -->
+  <section id="message" class="message">
+    <h2>✉️ Message Us</h2>
+    <div class="form-container">
+      <form id="contactForm">
+        <label>Nama</label>
+        <input type="text" id="nama" placeholder="Masukkan Nama" required>
+
+        <label>Tanggal Lahir</label>
+        <input type="date" id="tgl" required>
+
+        <label>Jenis Kelamin</label>
+        <div class="gender">
+          <input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki
+          <input type="radio" name="gender" value="Perempuan"> Perempuan
+        </div>
+
+        <label>Pesan</label>
+        <textarea id="pesan" placeholder="Tulis pesanmu..." required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+
+      <div class="result" id="resultBox">
+        <h3>📌 Hasil Form</h3>
+        <p><b>Current time :</b> <span id="time"></span></p>
+        <p><b>Nama :</b> <span id="outNama"></span></p>
+        <p><b>Tanggal Lahir :</b> <span id="outTgl"></span></p>
+        <p><b>Jenis Kelamin :</b> <span id="outGender"></span></p>
+        <p><b>Pesan :</b> <span id="outPesan"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>✨ Created By Kamarul Arifin Muzaffar ✨</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
